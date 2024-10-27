@@ -1,11 +1,46 @@
+import DictionaryPage from "@/features/dictionary/DictionaryPage";
+import FlashCardSetsPage from "@/features/flash-card/FlashCardSetsPage";
+import LearnFlashCardPage from "@/features/flash-card/LearnFlashCardPage";
+import GrammarCheckPage from "@/features/grammar-check/GrammarCheckPage";
+import LearnThroughImagesPage from "@/features/learn-through-images/LearnThroughImagesPage";
+import SpellCheckPage from "@/features/spell-check/SpellCheckPage";
 import Layout from "@/layout/Layout";
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 
 const router = createBrowserRouter(
   [
     {
       element: <Layout />,
-      path: "*",
+      children: [
+        {
+          path: "/",
+          element: <Navigate to="/dictionary" />,
+        },
+        {
+          path: "/dictionary",
+          element: <DictionaryPage />,
+        },
+        {
+          path: "/learn-through-images",
+          element: <LearnThroughImagesPage />,
+        },
+        {
+          path: "/learn-flashcard",
+          element: <FlashCardSetsPage />,
+        },
+        {
+          path: "/learn-flashcard/:ListId",
+          element: <LearnFlashCardPage />,
+        },
+        {
+          path: "/check-spelling",
+          element: <SpellCheckPage />,
+        },
+        {
+          path: "check-grammar",
+          element: <GrammarCheckPage />,
+        },
+      ],
     },
   ],
   {
