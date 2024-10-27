@@ -78,7 +78,7 @@ const LearnThroughImagesPage = () => {
           Image identification
         </Heading>
       </VStack>
-      <HStack gap={{ base: "10px", lg: "25px" }}>
+      <div className="flex flex-wrap gap-3 items-center">
         <div>
           <input
             type="file"
@@ -92,8 +92,8 @@ const LearnThroughImagesPage = () => {
           </Button>
         </div>
         <Text fontWeight="medium">OR</Text>
-        <Input placeholder="Paste image URL" className="max-w-[500px]" ref={textInputRef} onChange={handleOnChange} />
-      </HStack>
+        <Input placeholder="Paste image URL" className="max-w-[450px]" ref={textInputRef} onChange={handleOnChange} />
+      </div>
       {imageURL && (
         <div>
           <VStack alignItems={"flex-start"} gap={"20px"} marginTop={"12px"} marginBottom={"6px"}>

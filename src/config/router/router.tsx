@@ -4,6 +4,8 @@ import LearnFlashCardPage from "@/features/flash-card/LearnFlashCardPage";
 import GrammarCheckPage from "@/features/grammar-check/GrammarCheckPage";
 import LearnThroughImagesPage from "@/features/learn-through-images/LearnThroughImagesPage";
 import SpellCheckPage from "@/features/spell-check/SpellCheckPage";
+import LoginPage from "@/features/user/LoginPage";
+import RegisterPage from "@/features/user/RegisterPage";
 import Layout from "@/layout/Layout";
 import { createBrowserRouter, Navigate } from "react-router-dom";
 
@@ -15,6 +17,14 @@ const router = createBrowserRouter(
         {
           path: "/",
           element: <Navigate to="/dictionary" />,
+        },
+        {
+          path: "/login",
+          element: <LoginPage />,
+        },
+        {
+          path: "/register",
+          element: <RegisterPage />,
         },
         {
           path: "/dictionary",

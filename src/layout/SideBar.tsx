@@ -99,7 +99,7 @@ const SideBar = ({ isOpen }: Props) => {
   return (
     <VStack
       position="sticky"
-      width={(isOpen || isHovered) && !isMobile ? "250px" : "60px"}
+      width={(isOpen || isHovered) && !isMobile ? "260px" : "60px"}
       height="100vh"
       borderRight="1px"
       align="flex-start"

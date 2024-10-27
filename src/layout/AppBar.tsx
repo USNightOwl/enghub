@@ -1,6 +1,7 @@
 import Logo from "@/components/logo/Logo";
 import { Button, HStack, Text, useMediaQuery } from "@chakra-ui/react";
 import { Menu } from "lucide-react";
+import { Link } from "react-router-dom";
 
 type Props = {
   toggleSidebar: () => void;
@@ -27,8 +28,12 @@ const AppBar = ({ toggleSidebar }: Props) => {
         <Logo />
       </HStack>
       <HStack spacing="20px">
-        <Text fontSize="lg">Login</Text>
-        <Text fontSize="lg">Register</Text>
+        <Link to={"/login"}>
+          <Text fontSize="lg">Login</Text>
+        </Link>
+        <Link to={"/register"}>
+          <Text fontSize="lg">Register</Text>
+        </Link>
       </HStack>
     </HStack>
   );

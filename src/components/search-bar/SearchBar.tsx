@@ -16,8 +16,8 @@ const SearchBar = ({ word }: Props) => {
   };
 
   return (
-    <form onSubmit={handleSearch}>
-      <InputGroup size="md" width="400px">
+    <form onSubmit={handleSearch} className="w-full flex justify-center">
+      <InputGroup width={{ base: "full", md: "400px" }}>
         <Input
           pr="4.5rem"
           placeholder="Search dictionary"
