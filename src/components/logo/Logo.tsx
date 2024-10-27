@@ -1,10 +1,13 @@
 import { Heading } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const Logo = () => {
   return (
-    <Heading as="h5" size="md" textTransform="uppercase">
-      English Hub
-    </Heading>
+    <Link to={"/"}>
+      <Heading as="h5" size="md" textTransform="uppercase">
+        English Hub
+      </Heading>
+    </Link>
   );
 };
 

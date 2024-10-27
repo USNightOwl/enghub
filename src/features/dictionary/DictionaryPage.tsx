@@ -2,7 +2,7 @@ import SearchBar from "@/components/search-bar/SearchBar";
 import WordResult from "@/components/word-result/WordResult";
 import { searchWord } from "@/config/api/dictionary/apiDictionary";
 import { IWord, IWordNotFound } from "@/types/dictionary";
-import { HStack } from "@chakra-ui/react";
+import { Heading, HStack, VStack } from "@chakra-ui/react";
 import { AxiosResponse } from "axios";
 import React from "react";
 import { useSearchParams } from "react-router-dom";
@@ -35,6 +35,11 @@ const DictionaryPage = () => {
 
   return (
     <>
+      <VStack>
+        <Heading size="lg" textTransform="uppercase">
+          Dictionary
+        </Heading>
+      </VStack>
       <HStack justifyContent="center" marginY="15px">
         <SearchBar word={word} />
       </HStack>

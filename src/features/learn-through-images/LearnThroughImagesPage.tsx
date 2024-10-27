@@ -74,7 +74,9 @@ const LearnThroughImagesPage = () => {
   return (
     <div>
       <VStack marginTop={"10px"} marginBottom={"20px"}>
-        <Heading size="lg">Image identification</Heading>
+        <Heading size="lg" textTransform="uppercase">
+          Image identification
+        </Heading>
       </VStack>
       <HStack gap={{ base: "10px", lg: "25px" }}>
         <div>
