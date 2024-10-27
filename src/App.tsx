@@ -1,5 +1,12 @@
+import { RouterProvider } from "react-router-dom";
+import router from "./config/router/router";
+
 function App() {
-  return <div className="text-red-500 text-6xl font-bold">React Boilerplate</div>;
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
 export default App;
