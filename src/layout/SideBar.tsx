@@ -97,7 +97,7 @@ const SideBar = ({ isOpen }: Props) => {
   ];
 
   function returnWidth() {
-    if (isMobile) return "40px";
+    if (isMobile) return "42px";
     if (isOpen || isHovered) return "260px";
     return "60px";
   }
