@@ -39,14 +39,14 @@ const WordResult = ({ wordFound, wordNotFound }: Props) => {
                     {meaning.partOfSpeech}
                   </Heading>
                   {meaning.definitions.map((definition, index) => (
-                    <Box key={`definition${index}`} gap={"16px"}>
+                    <Box key={`definition${index}`} gap={"16px"} w="full">
                       <Text w="full">{definition.definition}</Text>
                       {definition.example && (
-                        <div className="flex items-start flex-wrap">
+                        <div className="flex items-start flex-wrap w-full gap-1">
                           <Text fontWeight="bold" color="blue.900" className="text-nowrap">
                             Example:
                           </Text>
-                          <Text w="full">{definition.example}</Text>
+                          <Text flexGrow={1}>{definition.example}</Text>
                         </div>
                       )}
                     </Box>
