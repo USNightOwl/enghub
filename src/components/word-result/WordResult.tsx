@@ -32,9 +32,9 @@ const WordResult = ({ wordFound, wordNotFound }: Props) => {
               ))}
           </VStack>
           {wordFound.map((wordFound, index) => (
-            <VStack key={index} gap={"32px"} alignItems="flex-start" marginTop={"20px"}>
+            <VStack key={index} gap={"32px"} alignItems="flex-start" marginTop={"20px"} w={"full"}>
               {wordFound.meanings.map((meaning, index) => (
-                <VStack key={`meaning${index}`} gap={"16px"} alignItems="flex-start">
+                <VStack key={`meaning${index}`} gap={"16px"} alignItems="flex-start" w={"full"}>
                   <Heading size="lg" color={"blue.900"} flexWrap={"nowrap"}>
                     {meaning.partOfSpeech}
                   </Heading>
