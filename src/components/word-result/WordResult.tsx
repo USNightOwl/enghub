@@ -35,7 +35,7 @@ const WordResult = ({ wordFound, wordNotFound }: Props) => {
             <VStack key={index} gap={"32px"} alignItems="flex-start" marginTop={"20px"}>
               {wordFound.meanings.map((meaning, index) => (
                 <VStack key={`meaning${index}`} gap={"16px"} alignItems="flex-start">
-                  <Heading size="lg" color={"blue.900"}>
+                  <Heading size="lg" color={"blue.900"} flexWrap={"nowrap"}>
                     {meaning.partOfSpeech}
                   </Heading>
                   {meaning.definitions.map((definition, index) => (
@@ -43,7 +43,7 @@ const WordResult = ({ wordFound, wordNotFound }: Props) => {
                       <Text>{definition.definition}</Text>
                       {definition.example && (
                         <HStack alignItems={"flex-start"}>
-                          <Text fontWeight="bold" color="blue.900">
+                          <Text fontWeight="bold" color="blue.900" flexWrap={"nowrap"}>
                             Example:
                           </Text>
                           <Text>{definition.example}</Text>
