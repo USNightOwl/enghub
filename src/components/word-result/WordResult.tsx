@@ -43,7 +43,7 @@ const WordResult = ({ wordFound, wordNotFound }: Props) => {
                       <Text w="full">{definition.definition}</Text>
                       {definition.example && (
                         <div className="flex items-start flex-wrap">
-                          <Text fontWeight="bold" color="blue.900" flexWrap={"nowrap"}>
+                          <Text fontWeight="bold" color="blue.900" className="text-nowrap">
                             Example:
                           </Text>
                           <Text w="full">{definition.example}</Text>
