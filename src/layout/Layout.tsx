@@ -14,7 +14,7 @@ const Layout = () => {
   return (
     <>
       <AppBar toggleSidebar={toggleSidebar} />
-      <HStack position="relative" align="flex-start">
+      <HStack position="relative" align="flex-start" gap={"0px"}>
         <SideBar isOpen={isSidebarOpen} />
         <main style={{ flex: 1, transition: "margin-left 0.3s", marginTop: "64px", padding: "10px" }} id="content">
           <Outlet />

@@ -32,22 +32,22 @@ const WordResult = ({ wordFound, wordNotFound }: Props) => {
               ))}
           </VStack>
           {wordFound.map((wordFound, index) => (
-            <VStack key={index} gap={"32px"} alignItems="flex-start" marginTop={"20px"} w={"full"}>
+            <VStack key={index} gap={"32px"} alignItems="flex-start" marginTop={"20px"} w="full">
               {wordFound.meanings.map((meaning, index) => (
                 <VStack key={`meaning${index}`} gap={"16px"} alignItems="flex-start" w={"full"}>
-                  <Heading size="lg" color={"blue.900"} flexWrap={"nowrap"} className="text-nowrap" w={"full"}>
+                  <Heading size="lg" color={"blue.900"} flexWrap={"nowrap"} className="text-nowrap" w="full">
                     {meaning.partOfSpeech}
                   </Heading>
                   {meaning.definitions.map((definition, index) => (
-                    <Box key={`definition${index}`} gap={"16px"} w={"full"}>
-                      <Text w={"full"}>{definition.definition}</Text>
+                    <Box key={`definition${index}`} gap={"16px"}>
+                      <Text w="full">{definition.definition}</Text>
                       {definition.example && (
-                        <HStack alignItems={"flex-start"}>
-                          <Text fontWeight="bold" color="blue.900" flexWrap={"nowrap"} className="text-nowrap">
+                        <div className="flex items-start flex-wrap">
+                          <Text fontWeight="bold" color="blue.900" flexWrap={"nowrap"}>
                             Example:
                           </Text>
-                          <Text>{definition.example}</Text>
-                        </HStack>
+                          <Text w="full">{definition.example}</Text>
+                        </div>
                       )}
                     </Box>
                   ))}
