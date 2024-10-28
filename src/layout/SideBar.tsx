@@ -96,11 +96,16 @@ const SideBar = ({ isOpen }: Props) => {
     }),
   ];
 
+  function returnWidth() {
+    if (isMobile) return "40px";
+    if (isOpen || isHovered) return "260px";
+    return "60px";
+  }
+
   return (
     <VStack
       position="sticky"
-      minW={(isOpen || isHovered) && !isMobile ? "260px" : "60px"}
-      maxW={(isOpen || isHovered) && !isMobile ? "260px" : "60px"}
+      w={returnWidth()}
       height="100dvh"
       borderRight="1px"
       align="flex-start"
@@ -121,6 +126,7 @@ const SideBar = ({ isOpen }: Props) => {
               justifyContent="flex-start"
               gap="10px"
               paddingY="6"
+              paddingX={isMobile ? "2" : "4"}
               _hover={{ bg: idx === selectedIndex ? "rgb(221, 242, 253)" : "rgba(0, 0, 0, 0.04)" }}
               bg={idx === selectedIndex ? "rgb(221, 242, 253)" : "transparent"}
               onClick={menu.onClick}
